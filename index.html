@@ -1,274 +1,257 @@
+index.html - DJ Bernd Sitzenstock aka Bernie DC
 <!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>DJ Bernd Sitzenstock aka Bernie DC</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    background:#f5f2ec;
-    color:#222;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:#f5f2ec;
+color:#222;
 }
-
 .page{
-    min-height:100vh;
-    padding:60px 24px;
+min-height:100vh;
+padding:60px 24px 32px;
 }
-
 .container{
-    max-width:1250px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1.05fr;
-    gap:60px;
-    align-items:start;
+max-width:1250px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1.05fr;
+gap:60px;
+align-items:start;
 }
-
+.text,
+.contact{
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(10px);
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
 .text{
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(10px);
-    padding:48px;
-    border-radius:30px;
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
+padding:48px;
+animation:fadeIn .8s ease both;
 }
-
 h1{
-    font-size:clamp(34px,5vw,58px);
-    line-height:1.08;
-    margin-bottom:34px;
-    font-weight:700;
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(42px,5.5vw,70px);
+line-height:1.02;
+margin-bottom:34px;
+font-weight:700;
+letter-spacing:-.5px;
 }
-
 p{
-    font-size:18px;
-    line-height:1.85;
-    color:#444;
-    margin-bottom:22px;
+font-size:18px;
+line-height:1.85;
+color:#444;
+margin-bottom:22px;
 }
-
 p:last-child{
-    margin-bottom:0;
+margin-bottom:0;
 }
-
 .right-column{
-    display:flex;
-    flex-direction:column;
+display:flex;
+flex-direction:column;
 }
-
 .gallery{
-    display:flex;
-    flex-direction:column;
-    gap:22px;
+display:flex;
+flex-direction:column;
+gap:22px;
 }
-
 .gallery img{
-    width:100%;
-    height:410px;
-    object-fit:cover;
-    border-radius:28px;
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-    transition:.3s ease;
+width:100%;
+height:410px;
+object-fit:cover;
+border-radius:28px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+transition:.35s ease;
+animation:fadeInUp .8s ease both;
 }
-
+.gallery img:nth-child(2){
+animation-delay:.12s;
+}
 .gallery img:hover{
-    transform:translateY(-6px);
+transform:translateY(-6px);
 }
-    .gallery img:first-child{
-    object-position:center 35%;
+.gallery img:first-child{
+object-position:center 35%;
 }
-
+}
 .gallery img:last-child{
-    object-position:center center;
-}
-
+object-position:center center;
 .contact{
-    margin-top:34px;
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(10px);
-    padding:34px;
-    border-radius:28px;
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
+margin-top:34px;
+padding:34px;
+animation:fadeInUp .8s ease .2s both;
 }
-
 .contact h2{
-    font-size:30px;
-    margin-bottom:22px;
+font-family:"Cormorant Garamond",serif;
+font-size:38px;
+line-height:1;
+margin-bottom:22px;
 }
-
 .contact p{
-    margin-bottom:18px;
+margin-bottom:18px;
 }
-
 .contact a{
-    color:#222;
-    text-decoration:none;
+color:#222;
+text-decoration:none;
 }
-
 .email-link{
-    border-bottom:2px solid #d7c29d;
-    transition:.25s;
+border-bottom:2px solid #d7c29d;
+transition:.25s;
 }
-
 .email-link:hover{
-    color:#8a6f4d;
-    border-color:#8a6f4d;
+color:#8a6f4d;
+border-color:#8a6f4d;
 }
-
 .social-links{
-    display:flex;
-    gap:16px;
-    margin-top:24px;
+display:flex;
+gap:16px;
+margin-top:24px;
 }
-
 .social-link{
-    width:56px;
-    height:56px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:#222;
-    color:white;
-    transition:.25s;
+width:56px;
+height:56px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#222;
+color:white;
+transition:.25s;
 }
-
 .social-link:hover{
-    background:#8a6f4d;
-    transform:translateY(-3px);
+background:#8a6f4d;
+transform:translateY(-3px);
 }
-
 .social-link i{
-    font-size:25px;
+font-size:25px;
 }
-
+.footer{
+max-width:1250px;
+margin:34px auto 0;
+text-align:center;
+font-size:14px;
+color:#777;
+}
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(18px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 @media (max-width:900px){
-
 .page{
-    padding:28px 16px;
+padding:28px 16px 24px;
 }
-
 .container{
-    grid-template-columns:1fr;
-    gap:30px;
+grid-template-columns:1fr;
+gap:30px;
 }
-
 .text{
-    padding:30px;
+padding:30px;
 }
-
 h1{
-    font-size:42px;
+font-size:46px;
 }
-
 p{
-    font-size:16px;
-    line-height:1.8;
+font-size:16px;
+line-height:1.8;
 }
-
 .gallery img{
-    height:auto;
+height:auto;
 }
-
 .contact{
-    padding:30px;
+padding:30px;
 }
-
+.contact h2{
+font-size:34px;
 }
-
+}
 </style>
-
 </head>
-
 <body>
-
 <div class="page">
-
 <div class="container">
-
 <div class="text">
-
 <h1>DJ Bernd Sitzenstock<br>aka Bernie DC</h1>
-
 <p>
-Bernd Sitzenstock, bekannt unter seinem Künstlernamen <strong>Bernie DC</strong>, gehört seit mehr als vier Jahrzehnten zu den etablierten DJs und Entertainern im Norden Deutschlands. Seine Karriere begann in Schleswig-Holstein und führte ihn von regionalen Partys und Stadtfesten bis auf die Bühnen großer Events und Firmenveranstaltungen in ganz Deutschland.
+Bernd Sitzenstock, bekannt unter seinem Künstlernamen <strong>Bernie DC</strong>, gehört seit mehr als Vier Jahrzehnten zu
+den etablierten DJs und Entertainern im Norden Deutschlands. Seine Karriere begann in Schleswig-Holstein und führte ihn
+von regionalen Partys und Stadtfesten bis auf die Bühnen großer Events und Firmenveranstaltungen in ganz Deutschland.
 </p>
-
 <p>
-Mit über 1.500 Auftritten hat sich Bernie DC als Moderator, DJ und Stimmungsgarant einen Namen gemacht. Sein Repertoire reicht von aktuellen Charts über Rock- und Popklassiker bis hin zu Schlager und Partyhits. Dabei steht weniger das reine Auflegen als vielmehr die Interaktion mit dem Publikum im Mittelpunkt seiner Shows.
+Mit über 1.500 Auftritten hat sich Bernie DC als Moderator, DJ und Stimmungsgarant einen Namen gemacht. Sein Repertoire
+reicht von aktuellen Charts über Rock- und Popklassiker bis hin zu Schlager und Partyhits. Dabei steht weniger das reine
+Auflegen als vielmehr die Interaktion mit dem Publikum im Mittelpunkt seiner Shows.
 </p>
-
 <p>
-Besonders bekannt ist Bernie DC durch seine langjährige Zusammenarbeit mit Swen Marten. Das Duo begeistert regelmäßig auf Großveranstaltungen wie dem Musikzirkus Meldorf, Stadtfesten, Open-Air-Events und Galaveranstaltungen. Auch Einsätze auf Schiffen, Firmenfeiern sowie exklusiven Hochzeiten gehören zu seinem festen Programm.
+Besonders bekannt ist Bernie DC durch seine langjährige Zusammenarbeit mit Swen Marten. Das Duo begeistert regelmäßig auf
+Großveranstaltungen wie dem Musikzirkus Meldorf, Stadtfesten, Open-Air-Events und Galaveranstaltungen. Auch Einsätze auf
+Schiffen, Firmenfeiern sowie exklusiven Hochzeiten gehören zu seinem festen Programm.
 </p>
-
 <p>
-Mit seiner langjährigen Erfahrung, seiner spontanen Moderation und seinem Gespür für das Publikum gilt Bernie DC als vielseitiger Entertainer, der generationsübergreifend für Stimmung sorgt und Veranstaltungen individuell gestaltet.
+Mit seiner langjährigen Erfahrung, seiner spontanen Moderation und seinem Gespür für das Publikum gilt Bernie DC als
+vielseitiger Entertainer, der generationsübergreifend für Stimmung sorgt und Veranstaltungen individuell gestaltet.
 </p>
-
 </div>
-
 <div class="right-column">
-
 <div class="gallery">
-
 <img src="IMG_4553.jpeg" alt="Bernie DC auf der Bühne">
-
 <img src="IMG_4554.jpeg" alt="Bernie DC Portrait">
-
 </div>
-
 <div class="contact">
-
 <h2>Kontakt</h2>
-
 <p>
 <strong>E-Mail</strong><br>
-
 <a class="email-link" href="mailto:bernd@sitzenstock.de">
 bernd@sitzenstock.de
 </a>
-
 </p>
-
 <div class="social-links">
-    <a class="social-link"
-   href="https://www.instagram.com/bernie_dc?igsh=M3AxMmI1ZGFkMHcz"
-   target="_blank"
-   aria-label="Instagram">
-
-    <i class="fa-brands fa-instagram"></i>
-
-</a>
-
 <a class="social-link"
-   href="https://www.facebook.com/share/1FFFeBF35Z/?mibextid=wwXIfr"
-   target="_blank"
-   aria-label="Facebook">
-
-    <i class="fa-brands fa-facebook-f"></i>
-
+href="https://www.instagram.com/bernie_dc?igsh=M3AxMmI1ZGFkMHcz"
+target="_blank"
+aria-label="Instagram">
+<i class="fa-brands fa-instagram"></i>
 </a>
-
+<a class="social-link"
+href="https://www.facebook.com/share/1FFFeBF35Z/?mibextid=wwXIfr"
+target="_blank"
+aria-label="Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
 </div>
-
 </div>
-
 </div>
-
 </div>
-
+<footer class="footer">
+© 2026 Bernie DC
+</footer>
 </div>
-
 </body>
 </html>
