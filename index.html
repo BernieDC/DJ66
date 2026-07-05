@@ -1,152 +1,172 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DJ66</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>DJ Bernd Sitzenstock aka Bernie DC</title>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f4f1ec;
-      color: #1f1f1f;
-    }
+<style>
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 60px 24px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
-      align-items: center;
-    }
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:#f5f2ec;
+    color:#222;
+}
 
-    .text {
-      background: rgba(255, 255, 255, 0.65);
-      padding: 42px;
-      border-radius: 28px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    }
+.page{
+    min-height:100vh;
+    padding:60px 24px;
+}
 
-    .text small {
-      display: block;
-      margin-bottom: 18px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #8a6f4d;
-      font-weight: 600;
-    }
+.container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:60px;
+    align-items:start;
+}
 
-    h1 {
-      font-size: clamp(42px, 6vw, 86px);
-      line-height: 0.95;
-      margin: 0 0 24px;
-    }
+.text{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    padding:48px;
+    border-radius:30px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin: 0;
-      color: #444;
-    }
+h1{
+    font-size:clamp(38px,5vw,64px);
+    line-height:1.05;
+    margin-bottom:34px;
+    font-weight:700;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
+p{
+    font-size:18px;
+    line-height:1.85;
+    color:#444;
+    margin-bottom:22px;
+}
 
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      min-height: 260px;
-      object-fit: cover;
-      border-radius: 28px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
-    }
+p:last-child{
+    margin-bottom:0;
+}
 
-    .gallery img:first-child {
-      grid-row: span 2;
-      min-height: 540px;
-    }
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
 
-    @media (max-width: 800px) {
-      .page {
-        padding: 28px 16px;
-        align-items: flex-start;
-      }
+.gallery img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:28px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    transition:.3s ease;
+}
 
-      .container {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
+.gallery img:hover{
+    transform:translateY(-6px);
+}
 
-      .text {
-        padding: 28px;
-        border-radius: 22px;
-      }
+.gallery img:first-child{
+    grid-row:span 2;
+    min-height:560px;
+}
 
-      h1 {
-        font-size: 46px;
-      }
+.gallery img:nth-child(2),
+.gallery img:nth-child(3){
+    min-height:270px;
+}
 
-      p {
-        font-size: 16px;
-      }
+@media (max-width:900px){
 
-      .gallery {
-        grid-template-columns: 1fr;
-      }
+.container{
+    grid-template-columns:1fr;
+    gap:30px;
+}
 
-      .gallery img,
-      .gallery img:first-child {
-        min-height: auto;
-        height: auto;
-        grid-row: auto;
-      }
-    }
-  </style>
+.text{
+    padding:30px;
+}
+
+h1{
+    font-size:42px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.gallery img:first-child{
+    grid-row:auto;
+    min-height:auto;
+}
+
+.gallery img{
+    min-height:auto;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-  <main class="page">
-    <section class="container">
 
-      <div class="text">
-        <small>Projekt</small>
-        <h1>DJ66</h1>
-        <p>
-          DJ Bernd Sitzenstock aka Bernie DC
-Bernd Sitzenstock, bekannt unter seinem Künstlernamen Bernie DC, gehört seit mehr als Vier Jahrzehnten zu den etablierten DJs und Entertainern im Norden Deutschlands. Seine Karriere begann in Schleswig-Holstein und führte ihn von regionalen Partys und Stadtfesten bis auf die Bühnen großer Events und Firmenveranstaltungen in ganz Deutschland.
+<div class="page">
 
+<div class="container">
+
+<div class="text">
+
+<p>
+Bernd Sitzenstock, bekannt unter seinem Künstlernamen <strong>Bernie DC</strong>, gehört seit mehr als vier Jahrzehnten zu den etablierten DJs und Entertainern im Norden Deutschlands. Seine Karriere begann in Schleswig-Holstein und führte ihn von regionalen Partys und Stadtfesten bis auf die Bühnen großer Events und Firmenveranstaltungen in ganz Deutschland.
+</p>
+
+<p>
 Mit über 1.500 Auftritten hat sich Bernie DC als Moderator, DJ und Stimmungsgarant einen Namen gemacht. Sein Repertoire reicht von aktuellen Charts über Rock- und Popklassiker bis hin zu Schlager und Partyhits. Dabei steht weniger das reine Auflegen als vielmehr die Interaktion mit dem Publikum im Mittelpunkt seiner Shows.
+</p>
 
-Besonders bekannt ist Bernie DC durch seine langjährige Zusammenarbeit mit Swen Marten. Das Duo begeistert regelmäßig auf Großveranstaltungen wie dem Musikzirkus Meldorf, Stadtfesten, Open-Air-Events und Galaveranstaltungen. Auch Einsätze auf Schiffen, Firmenfeiern sowie exklusiven Hochzeiten gehören zu seinem festen Programm.  
+<p>
+Besonders bekannt ist Bernie DC durch seine langjährige Zusammenarbeit mit Swen Marten. Das Duo begeistert regelmäßig auf Großveranstaltungen wie dem Musikzirkus Meldorf, Stadtfesten, Open-Air-Events und Galaveranstaltungen. Auch Einsätze auf Schiffen, Firmenfeiern sowie exklusiven Hochzeiten gehören zu seinem festen Programm.
+</p>
 
+<p>
 Mit seiner langjährigen Erfahrung, seiner spontanen Moderation und seinem Gespür für das Publikum gilt Bernie DC als vielseitiger Entertainer, der generationsübergreifend für Stimmung sorgt und Veranstaltungen individuell gestaltet.
-        </p>
-      </div>
+</p>
 
-      <div class="gallery">
-        <img src="IMG_4552.jpeg" alt="Bild 1">
-        <img src="IMG_4553.jpeg" alt="Bild 2">
-        <img src="IMG_4554.jpeg" alt="Bild 3">
-      </div>
+</div>
 
-    </section>
-  </main>
+<div class="gallery">
+
+<img src="IMG_4552.jpeg" alt="Bernie DC">
+
+<img src="IMG_4553.jpeg" alt="Bernie DC auf der Bühne">
+
+<img src="IMG_4554.jpeg" alt="Bernie DC Portrait">
+
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
